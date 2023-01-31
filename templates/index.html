@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>d_TB Tuberculosis Detection</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- Nav -->
+    <div class="landing">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent mb-5"  id="home">
+        <div class="container">
+          <a class="navbar-brand" href="#">d_TB</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link" href="#home">Home</a>
+              <a class="nav-link" href="#tb">Tuberculosis</a>
+              <a class="nav-link" href="#predict">Predict</a>
+              <a class="nav-link" href="#about">About Us</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <h1 class="h1_text">
+        Saving <br>
+        Live <br>
+        Early.
+      </h1>
+      <p class="p_head">
+        Designed to help healthcare providers detect Tuberculosis earlier and more accurately 
+        using machine learning algorithm. We can predict Tuberculosis more fast, acurate, and effective.
+      </p>
+      <div class="scroll">
+        <img src="{{url_for('static', filename='img/Polygon_1.png')}}" alt="scroll">
+        <p>Scroll down for  <br> 
+          more information</p>
+      </div>
+  </div>
+
+    <!-- <div class="landing"> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <!-- <button type="button" class="btn btn-secondary rounded-pill"><a href="#predict" style="text-decoration: none; color: white;"> Start Predict </a></button> -->
+          </div>
+        </div>
+      </div>
+    <!-- </div>  -->
+    <!-- View Prediction -->
+    <div class="tb text-dark" id="tb">
+      <div class="container">
+        <h2>Tuberculosis</h2>
+        <div class="tb_g">
+          <p>Tuberkulosis adalah penyakit infeksi berbahaya mematikan yang umumnya 
+            menginfeksi paru-paru. Disebabkan oleh bakteri <i>Mycobacterium tuberculosis</i>
+             tuberkulosis yang dapat menyebar dan menular melalui udara ketika seorang yang terinfeksi tuberkulosis 
+             batuk, bersin, atau meludah. Bakteri tuberkulosis dapat menyebabkan gangguan 
+              pernapasan, seperti batuk kronis yang disertai dengan dahak bahkan flek darah, dan sesak napas.
+               Jika tidak segera diobati, infeksi tuberkulosis dapat menyebar ke seluruh paru-paru dan menyebabkan 
+               kerusakan permanen pada jaringan paru-paru yang dapat menyebabkan komplikasi seperti pneumonia, 
+               abses paru, hingga menyebabkan kematian.</p>
+          <img src="{{url_for('static', filename='img/bg-2.png')}}" alt="Gambar X-ray Paru-paru">
+        </div>
+        <div class="tb_icont">
+          <div class="tb_i">
+            <div class="tb_iimg">
+              <!-- <img src="img/Polygon_1.png" alt=""> -->
+              <h2>10.000.000 ++</h2>
+            </div>
+            <div class="tb_ibody">
+              <p>Kasus di Seluruh Dunia</p>
+            </div>
+          </div>
+          <div class="tb_i">
+            <div class="tb_iimg">
+              <!-- <img src="img/Polygon_1.png" alt=""> -->
+              <h2>3</h2>
+            </div>
+            <div class="tb_ibody">
+              <p>Peringkat Indonesia Kasus Tuberkulosis Terbanyak di Dunia</p>
+            </div>
+          </div>
+          <div class="tb_i">
+            <div class="tb_iimg">
+              <h2>93.000 ++</h2>
+              <!-- <img src="img/Polygon_1.png" alt=""> -->
+            </div>
+            <div class="tb_ibody">
+              <p>Kasus Tuberkulosis Indonesia setiap Tahun</p>
+            </div>
+          </div>
+      </div>
+
+      </div>
+    </div>
+
+
+    <div class="tb-p text-dark text-center" id="predict">
+      <h2>Prediction</h2>
+      <p>Pilih file gambar X-ray paru-paru dengan menekan <b>"Choose File"</b> lalu tekan tombol <b>"Predict image"</b> untuk mengetahui hasil klasifikasi</p>
+      <div class="container">
+        <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
+          <input class="form-control" type="file" name="imagefile">
+          <input class="btn btn-secondary mt-3 rounded-pill" type="submit" value="Predict image">
+        </form>
+
+      </div>
+      
+      {% if prediction %}
+      <img src="{{image}}" alt="" width="250px">
+      <p class="text-center pt-2"><b>Gambar chest x-ray masuk ke dalam kategori {{prediction}} {{pred1}}</b></p>
+      {% endif %}
+    </div>
+    <!-- View Information -->
+    <div class="about container-fluid p-5 text-center" id="about">
+      <div class="row pb-5">
+        <div class="col-md-12 text-center">
+          <h2>About Us</h2>
+          <h5>d_TB adalah aplikasi pendeteksi tuberkulosis berbasis website yang dapat mengklasifikasi Tuberkulosis paru-paru manusia
+            hanya dengan memasukan citra X-ray paru-paru manusia sehingga dengan cepat dan akurat untuk membantu para
+          tenaga medis atau masyarakat luas dalam mendiagnosis Tuberkulosis</h5>
+        </div>
+      </div>
+      <div class="row mb-4 d-flex justify-content-center">
+        <div class="col-md-7">
+          <div class="card text-dark" style="background-color: #eeeeee;">
+            <div class="card-body">
+              <h4 class="card-title">Technology</h4>
+              <p class="card-text">Teknologi yang digunakan pada aplikasi ini adalah <strong>Computer Vision 
+                & Deep Learning</strong> dengan algoritma <strong>Convolutional Neural Network (CNN)</strong> yang mampu 
+              mengolah dan mengklasifikasi citra digital X-ray paru-paru manusia </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row d-flex justify-content-center">
+        <div class="col-md-7">
+          <div class="card text-dark" style="background-color: #eeeeee;">
+            <div class="card-body">
+              <h4 class="card-title">Accuracy</h4>
+              <p class="card-text">Dengan teknologi yang baik akurasi pada aplikasi dan sistem ini mencapai hingga 99% </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row mt-4 mb-4 d-flex justify-content-center">
+        <div class="col-md-7">
+          <div class="card text-dark" style="background-color: #eeeeee;">
+            <div class="card-body">
+              <h4 class="card-title">Dataset Reference</h4>
+              <p class="card-text">Tawsifur Rahman, Amith Khandakar, Muhammad A. Kadir, Khandaker R. Islam, Khandaker F. Islam, Zaid B. Mahbub, Mohamed Arselene Ayari, Muhammad E. H. Chowdhury. 
+                (2020) "Reliable Tuberculosis Detection using Chest X-ray with Deep Learning, Segmentation and Visualization". 
+                IEEE Access, Vol. 8, pp 191586 - 191601. DOI. 10.1109/ACCESS.2020.3031384.
+                <a href="https://ieeexplore.ieee.org/document/9224622" target="_blank"><strong>Paper Link</strong></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="about">
+      <div class="row text-light" style="background-color: black;">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+          <p class="text-center pt-2">&copy; 2022 Dandi Rifaldi Aldiansyah</p>
+        </div>
+        <div class="col-md-4 text-end">
+          <a href="https://github.com/mellasylvie/CL-TB_Capstone"><i class="fab fa-github fa-2x " style="padding: 5px;"></i></a>
+          <a href="https://github.com/mellasylvie/CL-TB_Capstone"><i class="fab fa-linkedin fa-2x " style="padding: 5px; margin-right: 10%;" ></i></a>
+        </div>
+      </div>
+    </div>
+    <script src="{{url_for('static',filename='js/script.js')}}" type="text/javascript"></script>
+  </body>
+</html>
