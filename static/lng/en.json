@@ -1,0 +1,22 @@
+{
+    "home":"Home",
+    "tb":"Tuberculosis",
+    "pred":"Predict",
+    "pred2":"Prediction",
+    "about":"About Us",
+    "h1":"Save <br>Live<br> Early.",
+    "desc1":"Designed to help healthcare providers detect Tuberculosis earlier and more accurately using machine learning algorithm. We can predict Tuberculosis more fast, acurate, and effective.",
+    "scroll":"Scroll down for <br> more information",
+    "tb_p":"Tuberculosis is a deadly infectious disease that commonly infects the lungs. Caused by the bacteria <i>Mycobacterium tuberculosis</i>, tuberculosis can be spread and transmitted through the air when a person infected with tuberculosis coughs, sneezes, or spits. The tuberculosis bacteria can cause respiratory problems, such as chronic cough accompanied by phlegm and even blood spots, and shortness of breath. If untreated, the tuberculosis infection can spread throughout the lungs and cause permanent damage to the lung tissue which can lead to complications such as pneumonia, lung abscess, and death.",
+    "case_w":"Worldwide Cases",
+    "rank":"Rank of Indonesia with the most tuberculosis cases in the world",
+    "case_i":"Indonesia's Tuberculosis Cases 2020",
+    "pred_d":"Select the lung X-ray image file by pressing <b>'Choose File'</b> and then press the <b>'Predict image'</b> button to find out the classification results.",
+    "pred_p":"Gambar citra X-ray masuk ke dalam kategori",
+    "desc2":"d_TB is a web-based tuberculosis detection application that can classify human lung tuberculosis only by entering human lung X-ray images so that it is fast and accurate to help medical personnel or the wider community in diagnosing tuberculosis.",
+    "tech":"Technology",
+    "tech_p":"The technology used in this application is <strong>Computer Vision & Deep Learning</strong> with the <strong>Convolutional Neural Network (CNN)</strong> algorithm which is able to process and classify digital X-ray images of human lungs.",
+    "acc":"Accuracy",
+    "acc_p":"With good technology, the accuracy of this application and system reaches up to 98.0%. ",
+    "dataset":"Dataset Reference"   
+}

@@ -35,9 +35,9 @@ def predict():
     # global desc
     if pred[0]>=0.5:
         # desc = 'NORMAL'
-        return render_template('index.html',_anchor="predict", prediction="TUBERKULOSIS", image=image_path)
+        return render_template('index.html',_anchor="predict", fname=imagefile.filename,prediction="TUBERKULOSIS", image=image_path)
     elif pred[0]<0.5:
-        return render_template('index.html',_anchor="predict", prediction="NORMAL", image=image_path)
+        return render_template('index.html',_anchor="predict", fname=imagefile.filename, prediction="NORMAL", image=image_path)
         # desc = 'TUBERKULOSIS'
 
     # classification = '%s' % (desc)

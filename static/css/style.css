@@ -29,9 +29,17 @@
     background: url(../img/head-c.png) no-repeat center center fixed;
     background-size: cover;
   }
+  .nav{
+    padding-left: 150px;
+  }
   .nav-link{
-    font-size: 20px;
+    font-size: 20px !important;
     color: #eeeeee !important;
+  }
+  .tl{
+    font-size: 13px !important;
+    color: #eeeeee !important;
+    padding-top: 15px;
   }
   .navbar-nav a{
     padding-right: 30px !important;
@@ -40,28 +48,37 @@
   .navbar-nav .nav-link:hover{
     color: white !important;
   }
+  .bg-b{
+    background-color: black;
+  }
+  /* .hh{
+    height: 100vh;
+  } */
   .h1_text{
-    position: absolute;
-    top: 140px;
-    left: 100px;
+    /* position: absolute; */
+    /* top: 140px; */
+    /* left: 100px; */
     color: white;
+    padding: 10px 0px 0px 90px;
     font-size: 100px;
   }
   .p_head{
-    position: absolute;
-    top: 500px;
-    left: 100px;
+    padding: 0px 10px 30px 90px;
+    /* position: absolute; */
+    /* top: 500px; */
+    /* left: 100px; */
     width: 500px;
     color: white;
     font-size: 18px;
   }
   .scroll{
-    position: absolute;
+    /* position: absolute; */
     display: flex;
     align-items: top;
-    top: 650px;
-    left: 100px;
-    width: 500px;
+    padding: 10px 0px 0px 90px;
+    /* top: 650px; */
+    /* left: 100px; */
+    /* width: 500px; */
     color: white;
     font-size: 15px;
   }
@@ -102,6 +119,9 @@
   .tb_i{
     width: 300px;
     margin: 15px;
+    padding: 0px 20px 0px 20px;
+    /* flex: 1 1 auto; */
+    /* line-height: 40px; */
   }
   .tb_iimg{
     width: 100%;
@@ -116,30 +136,74 @@
     font-size: 20px;
     font-family: 'Space Grotesk', sans-serif;
   }
-  @media screen and (min-width: 700px) {
-    .navbar-toggle,
-    .navbar-toggle[aria-expanded="true"] {
-      display: none;
+  .tb_i + .tb_i {
+    border-left: solid 1px white;
+  }
+  @media screen and (max-width: 990px) {
+    .landing{
+      height: auto;
     }
-    .navbar-nav,
-  .navbar-toggle[aria-expanded="true"] .navbar-nav {
-    visibility: visible;
-    opacity: 1;
-    position: static;
-    display: block;
-    height: 100%;
-  }
-
-  .navbar-links,
-  #navbar-toggle[aria-expanded="true"] #navbar-menu .navbar-links {
-    margin: 0;
-    padding: 0;
-    box-shadow: none;
-    position: static;
-    flex-direction: row;
-    width: 100%;
-    height: 100%;
-  }
+    .nav{
+      padding-left: 0px;
+    }
+    .nav1{
+      text-align: right;
+    }
+    .h1_text{
+      padding: 0px 5px 0px 20px;
+      font-size: 90px;
+    }
+    .p_head{
+      padding: 50px 5px 50px 20px;
+      font-size: 15px;
+      width: auto;
+    }
+    .scroll{
+      padding: 0vh 5px 0px 20px;
+      font-size: 13px;
+    }
+    .tb{
+      height: auto;
+    }
+    .tb-p{
+      height: auto;
+    }
+    .tb_g{
+      flex-wrap: wrap;    
+    }
+    .tb_g p{
+      text-align: center;    
+    }
+    .tb_g img{
+      max-width: 100%;
+      /* max-height: 100%; */
+      /* margin-top: 10px; */
+      padding-right: 0px;
+    }
+    .tb_icont{
+      flex-wrap: wrap;
+    }
+    .tb_i{
+      width: auto;
+      margin: 50px ;
+    }
+    .tb_iimg{
+      width: auto;
+    }
+    .tb_iimg h2{
+      width: 100%;
+    }
+    .tb_ibody p{
+      text-align: center;
+      /* margin-bottom: 10px; */
+      padding: 0px;
+      font-size: 20px;
+      font-family: 'Space Grotesk', sans-serif;
+    }
+    .tb_i + .tb_i {
+      border-left: solid 0px white;
+      border-top: solid 1px white;
+    }
   }
   .tb-p{
     background-color: #eeeeee;
@@ -151,4 +215,7 @@
     text-align: center;
     font-family: 'Space Grotesk', sans-serif !important;
     font-weight: bold;
+  }
+  .hasil{
+    padding: 10px 10px 50px 10px;
   }

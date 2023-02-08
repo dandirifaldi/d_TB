@@ -1,0 +1,22 @@
+{
+    "home":"Beranda",
+    "tb":"Tuberkulosis",
+    "pred":"Prediksi",
+    "pred2":"Prediksi",
+    "about":"Tentang",
+    "h1":"Selamatkan <br>Hidup<br> Lebih Awal.",
+    "desc1":"Dirancang untuk membantu penyedia layanan kesehatan mendeteksi Tuberkulosis lebih awal dan lebih akurat menggunakan algoritma pembelajaran mesin. Kita dapat memprediksi Tuberkulosis dengan lebih cepat, akurat, dan efektif.",
+    "scroll":"Gulir ke bawah untuk <br>informasi lebih lanjut",
+    "tb_p":"Tuberkulosis adalah penyakit infeksi berbahaya mematikan yang umumnya menginfeksi paru-paru. Disebabkan oleh bakteri <i>Mycobacterium tuberculosis</i> tuberkulosis yang dapat menyebar dan menular melalui udara ketika seorang yang terinfeksi tuberkulosis batuk, bersin, atau meludah. Bakteri tuberkulosis dapat menyebabkan gangguan pernapasan, seperti batuk kronis yang disertai dengan dahak bahkan flek darah, dan sesak napas. Jika tidak segera diobati, infeksi tuberkulosis dapat menyebar ke seluruh paru-paru dan menyebabkan kerusakan permanen pada jaringan paru-paru yang dapat menyebabkan komplikasi seperti pneumonia, abses paru, hingga menyebabkan kematian.",
+    "case_w":"Kasus di Seluruh Dunia",
+    "rank":"Peringkat Indonesia Kasus Tuberkulosis Terbanyak di Dunia",
+    "case_i":"Kasus Tuberkulosis Indonesia setiap Tahun",
+    "pred_d":"Pilih file gambar X-ray paru-paru dengan menekan <b>'Choose File'</b> lalu tekan tombol <b>'Predict image'</b> untuk mengetahui hasil klasifikasi",
+    "pred_p":"Gambar citra X-ray masuk ke dalam kategori",
+    "desc2":"d_TB adalah aplikasi pendeteksi tuberkulosis berbasis website yang dapat mengklasifikasi Tuberkulosis paru-paru manusia hanya dengan memasukan citra X-ray paru-paru manusia sehingga dengan cepat dan akurat untuk membantu para tenaga medis atau masyarakat luas dalam mendiagnosis Tuberkulosis.",
+    "tech":"Teknologi",
+    "tech_p":"Teknologi yang digunakan pada aplikasi ini adalah <strong>Computer Vision & Deep Learning</strong> dengan algoritma <strong>Convolutional Neural Network (CNN)</strong> yang mampu mengolah dan mengklasifikasi citra digital X-ray paru-paru manusia",
+    "acc":"Akurasi",
+    "acc_p":"Dengan teknologi yang baik akurasi pada aplikasi dan sistem ini mencapai hingga 98,0% ",
+    "dataset":"Referensi Dataset"   
+}

@@ -2,77 +2,80 @@
 <html>
   <head>
     <title>d_TB Tuberculosis Detection</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="../static/css/style.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-    <style>
-      
-
-    </style>
   </head>
-  <body>
+  <!-- <body> -->
+  <body id="page-top" onload="translate('id','lng-tag')"></body>
     <!-- Nav -->
     <div class="landing">
-      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent mb-5"  id="home">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-transparent" id="home">
         <div class="container">
           <a class="navbar-brand" href="#">d_TB</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-link" href="#home">Home</a>
-              <a class="nav-link" href="#tb">Tuberculosis</a>
-              <a class="nav-link" href="#predict">Predict</a>
-              <a class="nav-link" href="#about">About Us</a>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">d_TB</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="nav navbar-nav justify-content-center flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#home" lng-tag="home"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#tb" lng-tag="tb"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#predict" lng-tag="pred"></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about" lng-tag="about"></a>
+                </li>
+              </ul>
+              <ul class="nav1 navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a href="javascript:void(0);" class="nav-link js-scroll-trigger lng tl" id="enTranslator">EN</a>
+                  </li>
+                  <li class="nav-item">
+                  <a href="javascript:void(0);" class="nav-link js-scroll-trigger lng tl" id="idTranslator">ID</a>
+                  </li>
+              </ul> 
             </div>
           </div>
         </div>
       </nav>
-      <h1 class="h1_text">
-        Saving <br>
-        Live <br>
-        Early.
+      <div class="hh">
+      <h1 class="h1_text" lng-tag="h1">
       </h1>
-      <p class="p_head">
-        Designed to help healthcare providers detect Tuberculosis earlier and more accurately 
-        using machine learning algorithm. We can predict Tuberculosis more fast, acurate, and effective.
+      <p class="p_head" lng-tag="desc1">
       </p>
       <div class="scroll">
         <img src="{{url_for('static', filename='img/Polygon_1.png')}}" alt="scroll">
-        <p>Scroll down for  <br> 
-          more information</p>
+        <!-- <img src="../static/img/Polygon_1.png" alt="scroll"> -->
+        <p lng-tag="scroll"></p>
       </div>
+      </div>  
   </div>
 
-    <!-- <div class="landing"> -->
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <!-- <button type="button" class="btn btn-secondary rounded-pill"><a href="#predict" style="text-decoration: none; color: white;"> Start Predict </a></button> -->
-          </div>
-        </div>
-      </div>
-    <!-- </div>  -->
     <!-- View Prediction -->
     <div class="tb text-dark" id="tb">
       <div class="container">
-        <h2>Tuberculosis</h2>
+        <h2 lng-tag="tb"></h2>
         <div class="tb_g">
-          <p>Tuberkulosis adalah penyakit infeksi berbahaya mematikan yang umumnya 
-            menginfeksi paru-paru. Disebabkan oleh bakteri <i>Mycobacterium tuberculosis</i>
-             tuberkulosis yang dapat menyebar dan menular melalui udara ketika seorang yang terinfeksi tuberkulosis 
-             batuk, bersin, atau meludah. Bakteri tuberkulosis dapat menyebabkan gangguan 
-              pernapasan, seperti batuk kronis yang disertai dengan dahak bahkan flek darah, dan sesak napas.
-               Jika tidak segera diobati, infeksi tuberkulosis dapat menyebar ke seluruh paru-paru dan menyebabkan 
-               kerusakan permanen pada jaringan paru-paru yang dapat menyebabkan komplikasi seperti pneumonia, 
-               abses paru, hingga menyebabkan kematian.</p>
+          <p lng-tag="tb_p"></p>
           <img src="{{url_for('static', filename='img/bg-2.png')}}" alt="Gambar X-ray Paru-paru">
+          <!-- <img src="../static/img/bg-2.png" alt="Gambar X-ray Paru-paru"> -->
         </div>
         <div class="tb_icont">
           <div class="tb_i">
@@ -81,7 +84,7 @@
               <h2>10.000.000 ++</h2>
             </div>
             <div class="tb_ibody">
-              <p>Kasus di Seluruh Dunia</p>
+              <p lng-tag="case_w"></p>
             </div>
           </div>
           <div class="tb_i">
@@ -90,7 +93,7 @@
               <h2>3</h2>
             </div>
             <div class="tb_ibody">
-              <p>Peringkat Indonesia Kasus Tuberkulosis Terbanyak di Dunia</p>
+              <p lng-tag="rank"></p>
             </div>
           </div>
           <div class="tb_i">
@@ -99,7 +102,7 @@
               <!-- <img src="img/Polygon_1.png" alt=""> -->
             </div>
             <div class="tb_ibody">
-              <p>Kasus Tuberkulosis Indonesia setiap Tahun</p>
+              <p lng-tag="case_i"></p>
             </div>
           </div>
       </div>
@@ -109,8 +112,8 @@
 
 
     <div class="tb-p text-dark text-center" id="predict">
-      <h2>Prediction</h2>
-      <p>Pilih file gambar X-ray paru-paru dengan menekan <b>"Choose File"</b> lalu tekan tombol <b>"Predict image"</b> untuk mengetahui hasil klasifikasi</p>
+      <h2 lng-tag="pred2"></h2>
+      <p lng-tag="pred_d"></p>
       <div class="container">
         <form class="p-3 text-center" action='/', method="post" enctype="multipart/form-data">
           <input class="form-control" type="file" name="imagefile">
@@ -120,28 +123,28 @@
       </div>
       
       {% if prediction %}
-      <img src="{{image}}" alt="" width="250px">
-      <p class="text-center pt-2"><b>Gambar chest x-ray masuk ke dalam kategori {{prediction}} {{pred1}}</b></p>
+      <div class="hasil">
+        <img src="{{image}}" alt="" width="250px">
+        <p class="text-center pt-2">{{fname}}</p>
+        <p class="text-center pt-2" lng-tag="pred_p"></p>
+        <p class="text-center pt-2"><strong> {{prediction}} </strong></p>
+      </div>
       {% endif %}
     </div>
     <!-- View Information -->
     <div class="about container-fluid p-5 text-center" id="about">
       <div class="row pb-5">
         <div class="col-md-12 text-center">
-          <h2>About Us</h2>
-          <h5>d_TB adalah aplikasi pendeteksi tuberkulosis berbasis website yang dapat mengklasifikasi Tuberkulosis paru-paru manusia
-            hanya dengan memasukan citra X-ray paru-paru manusia sehingga dengan cepat dan akurat untuk membantu para
-          tenaga medis atau masyarakat luas dalam mendiagnosis Tuberkulosis</h5>
+          <h2 lng-tag="about"></h2>
+          <h5 lng-tag="desc2"></h5>
         </div>
       </div>
       <div class="row mb-4 d-flex justify-content-center">
         <div class="col-md-7">
           <div class="card text-dark" style="background-color: #eeeeee;">
             <div class="card-body">
-              <h4 class="card-title">Technology</h4>
-              <p class="card-text">Teknologi yang digunakan pada aplikasi ini adalah <strong>Computer Vision 
-                & Deep Learning</strong> dengan algoritma <strong>Convolutional Neural Network (CNN)</strong> yang mampu 
-              mengolah dan mengklasifikasi citra digital X-ray paru-paru manusia </p>
+              <h4 class="card-title" lng-tag="tech"></h4>
+              <p class="card-text" lng-tag="tech_p"> </p>
             </div>
           </div>
         </div>
@@ -150,8 +153,8 @@
         <div class="col-md-7">
           <div class="card text-dark" style="background-color: #eeeeee;">
             <div class="card-body">
-              <h4 class="card-title">Accuracy</h4>
-              <p class="card-text">Dengan teknologi yang baik akurasi pada aplikasi dan sistem ini mencapai hingga 99% </p>
+              <h4 class="card-title" lng-tag="acc"></h4>
+              <p class="card-text" lng-tag="acc_p"> </p>
             </div>
           </div>
         </div>
@@ -160,7 +163,7 @@
         <div class="col-md-7">
           <div class="card text-dark" style="background-color: #eeeeee;">
             <div class="card-body">
-              <h4 class="card-title">Dataset Reference</h4>
+              <h4 class="card-title" lng-tag="dataset"></h4>
               <p class="card-text">Tawsifur Rahman, Amith Khandakar, Muhammad A. Kadir, Khandaker R. Islam, Khandaker F. Islam, Zaid B. Mahbub, Mohamed Arselene Ayari, Muhammad E. H. Chowdhury. 
                 (2020) "Reliable Tuberculosis Detection using Chest X-ray with Deep Learning, Segmentation and Visualization". 
                 IEEE Access, Vol. 8, pp 191586 - 191601. DOI. 10.1109/ACCESS.2020.3031384.
@@ -177,12 +180,19 @@
         <div class="col-md-4">
           <p class="text-center pt-2">&copy; 2022 Dandi Rifaldi Aldiansyah</p>
         </div>
-        <div class="col-md-4 text-end">
-          <a href="https://github.com/mellasylvie/CL-TB_Capstone"><i class="fab fa-github fa-2x " style="padding: 5px;"></i></a>
-          <a href="https://github.com/mellasylvie/CL-TB_Capstone"><i class="fab fa-linkedin fa-2x " style="padding: 5px; margin-right: 10%;" ></i></a>
+        <div class="col-md-4 text-end" id="infor">
+          <a href="https://github.com/dandirifaldi"><i class="fab fa-github fa-2x " style="padding: 5px;"></i></a>
+          <a href="https://www.linkedin.com/in/dandi-rifaldi-aldiansyah-185360140/"><i class="fab fa-linkedin fa-2x " style="padding: 5px; margin-right: 10%;" ></i></a>
         </div>
       </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js" integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous"></script>
     <script src="{{url_for('static',filename='js/script.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static',filename='js/translate.js')}}" type="text/javascript"></script>
+    <script src="{{url_for('static',filename='js/index.js')}}" type="text/javascript"></script>
+    <!-- <script src="../static/js/script.js" type="text/javascript"></script> -->
+    <!-- <script src="../static/js/translate.js" type="text/javascript"></script> -->
+    <!-- <script src="../static/js/index.js" type="text/javascript"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
 </html>
