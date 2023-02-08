@@ -4,12 +4,14 @@ document.addEventListener("DOMContentLoaded", function(){
         if (window.scrollY > 1) {
           document.getElementById('home').classList.add('fixed-top');
           document.getElementById('home').classList.add('bg-b');
+          document.getElementById('home').classList.remove('bg-transparent');
           // add padding top to show content behind navbar
           navbar_height = document.querySelector('.navbar').offsetHeight;
           document.body.style.paddingTop = navbar_height + 'px';
         } else {
-          document.getElementById('home').classList.remove('fixed-top');
-          document.getElementById('home').classList.remove('bg-transparent');
+            document.getElementById('home').classList.remove('fixed-top');
+            document.getElementById('home').classList.add('bg-transparent');
+            document.getElementById('home').classList.remove('bg-b');
            // remove padding top from body
           document.body.style.paddingTop = '0';
         } 
